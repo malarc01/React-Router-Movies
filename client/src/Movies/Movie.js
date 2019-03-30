@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+{/**/}
 export default class Movie extends Component {
   constructor(props) {
     super(props);
@@ -10,8 +10,12 @@ export default class Movie extends Component {
   }
 
   componentDidMount() {
+    
+    {/*const avenger = props.avengers.find(object=>`${object.id}`===id);*/}
+    {/*const x = props.movie.find(object=>`${object.id}`===id);*/}
     // change this line to grab the id passed on the URL
-    const id = 1;
+    // const id = 5;
+    const id=this.props.match.params.id;
     this.fetchMovie(id);
   }
 
@@ -38,6 +42,7 @@ export default class Movie extends Component {
   // }
 
   render() {
+    console.log(this.props);
     if (!this.state.movie) {
       return <div>Loading movie information...</div>;
     }
