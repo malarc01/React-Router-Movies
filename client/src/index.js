@@ -3,5 +3,6 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 import App from './App';
+import {BrowserRouter as Test} from 'react-router-dom'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Test><App /></Test>, document.getElementById('root'));
